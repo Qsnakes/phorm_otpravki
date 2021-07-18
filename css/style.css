@@ -67,7 +67,7 @@ textarea.form__input {
 .options__label::before {
     content: "";
     align-self: flex-start;
-    flex: 0px 0px 24px;
+    flex: 0 0 24px;
     height: 24px;
     background-color: pink;
     border-radius: 50%;
@@ -75,7 +75,7 @@ textarea.form__input {
 }
 
 .options__label::after {
-    transition: all 0.3s ease 0s;
+    transition: transform 0.5s ease 0s;
     content: "";
     position: absolute;
     top: 4px;
