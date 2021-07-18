@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const error = formValidate(form);
 
         if (error === 0) {
-            
-        } else {
+
+        } else{
             alert('Заполните обязательные поля');
         }
 
@@ -56,7 +56,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     //Функция проверки E-mail
     function emailTest(input) {
-        const re = !/^\w+([\.-]?\w+)*@\w+)[\.-]?\w+)*(\.\w{2,8})+$/
-        return re.test(input.value);
+        const re = /^\w+([\.-]?\w+)*@(\w+[\.-]?\w+)*(\.\w{2,8})+$/
+        return !re.test(input.value);
     }
+
+        
 });
