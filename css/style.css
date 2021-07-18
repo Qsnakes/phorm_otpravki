@@ -1,7 +1,7 @@
 .form {
     max-width: 550px;
     margin: 0 auto;
-    color: pink;
+    color: blueviolet;
     padding: 30px 0px;
     
 }
@@ -69,7 +69,7 @@ textarea.form__input {
     align-self: flex-start;
     flex: 0 0 24px;
     height: 24px;
-    background-color: pink;
+    background-color: burlywood;
     border-radius: 50%;
     margin: 0 10px 0 0 ;
 }
@@ -82,14 +82,11 @@ textarea.form__input {
     left: 4px;
     width: 16px;
     height: 16px;
-    background-color: black;
+    background-color: wheat;
     border-radius: 50%;
     transform: scale(0);
 }
 
-.select {
-
-}
 
 .file {
 

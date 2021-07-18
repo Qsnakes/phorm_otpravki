@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/select.css">
   <title>Document</title>
 </head>
 <body>
@@ -42,11 +43,14 @@
                 </div>
                 <div class="form__item">
                     <div class="form__label">Возраст:</div>
+                    <!-- Ебанутый слайдер выбора Ajax + JS + CSS -->
                     <select name="age" class="select">
+                        <option disabled>Выбрать</option>
                         <option value="От 18 до 25" selected="selected"> Молодой</option>
                         <option value="От 25 до 45">Старый</option>
                         <option value="От 45 и выше">Дед</option>
                     </select>
+                    <!-- Конец Ебанутого слайдера -->
                 </div>
 
                 <div class="form__item">
@@ -70,6 +74,11 @@
                 <button type="submit" class="form__button">Отправить</button>
             </form>
         </div>
+
+
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/select.js"></script>
 </body>
 </html>
