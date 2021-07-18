@@ -1,31 +1,37 @@
 "use strict"
 
-document.addEventListener('DOMContentLoader', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('form');
     form.addEventListener('submit', formSend);
 
     async function formSend(e) {
         e.preventDefault();
 
-        let error = formValidate(form);
+        const error = formValidate(form);
+
+        if (error === 0) {
+            
+        } else {
+            alert('Заполните обязательные поля');
+        }
 
     }
 
 
     function formValidate(form) {
         let error = 0;
-        let formReq = document.querySelectorAll('._req');
+        let formReq = document.querySelectorAll('._zxc');
 
         for (let index = 0; index < formReq.length; index++) {
             const input = formReq[index];
             formRemoveError(input);
 
-            if(input.classList.contains('_email')){
+            if (input.classList.contains('_email')) {
                 if (emailTest(input)) {
                     formAddError(input);
                     error++;
                 }
-            } else if (input.getAttribute('type') === 'checkbox' && input.checkbox === false) {
+            } else if (input.getAttribute("type") === 'checkbox' && input.checkbox === false) {
                 formAddError(input)
                 error++;
             } else {
@@ -34,8 +40,8 @@ document.addEventListener('DOMContentLoader', function () {
                     error++;
                 }
             }
-
         }
+        return error;
     }
 
     function formAddError(input) {
@@ -50,6 +56,7 @@ document.addEventListener('DOMContentLoader', function () {
 
     //Функция проверки E-mail
     function emailTest(input) {
-        return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(input.value);
+        const re = !/^\w+([\.-]?\w+)*@\w+)[\.-]?\w+)*(\.\w{2,8})+$/
+        return re.test(input.value);
     }
 });

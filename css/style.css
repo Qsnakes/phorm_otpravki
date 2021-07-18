@@ -10,7 +10,7 @@ body{
     
 }
 
-.form * {
+.form {
     outline: none;
 }
 
@@ -33,22 +33,21 @@ body{
 
 .form__input {
     height: 50px;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     border-radius: 5px;
     width: 100%;
     font-size: 18px;
     transition: all 0.5s ease 0s;
 }
 
-
-
 .form__input:focus {
     box-shadow: 0 0 15px aquamarine;
 }
 
 .form__input._error {
-    box-shadow: 0 0 15px aquamarine;
+    box-shadow: 0 0 15px red;
 }
+
 
 textarea.form__input {
     min-height: 120px;
@@ -138,6 +137,14 @@ textarea.form__input {
 
 .file__prewiew img {
     max-width: 100%;
+}
+
+.checkbox {
+
+}
+
+.checkbox._error .checkbox__label::before {
+    box-shadow: 0 0 15px red;
 }
 
 .checkbox__input {
