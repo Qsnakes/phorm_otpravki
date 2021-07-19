@@ -139,10 +139,6 @@ textarea.form__input {
     max-width: 100%;
 }
 
-.checkbox {
-
-}
-
 .checkbox._error .checkbox__label::before {
     box-shadow: 0 0 15px red;
 }
@@ -220,4 +216,31 @@ textarea.form__input {
 .form__button:active {
     top: 3px;
     box-shadow: 0 0px 0 #0c3138;
+}
+
+.file__preview {
+   margin-top: 20px;
+}
+
+.form__body {
+    position: relative;
+}
+
+.form__body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 110%;
+    height: 110%;
+    background: rgba(128, 128, 128, 0.7) url('../img/loading.gif') center / 50px no-repeat;
+    opacity: 0;
+    visibility: hidden; 
+    background-size: 80px;
+    transition: all 0.5s ease 0s;
+}
+
+.form__body._sending::after {
+    opacity: 1;
+    visibility: visible;
 }
