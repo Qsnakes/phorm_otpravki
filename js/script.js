@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function formValidate(form) {
         let error = 0;
-        let formReq = document.querySelectorAll('._zxc');
+        let formReq = document.querySelectorAll('._req');
 
         for (let index = 0; index < formReq.length; index++) {
             const input = formReq[index];

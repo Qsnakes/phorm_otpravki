@@ -11,9 +11,9 @@
     $mail->IsHTML(true);
 
     //От кого письмо
-    $mail->setForm('nikus1922@icloud.com', 'Никита Андреевич');
+    $mail->setFrom('nikitanik40658@gmail.com', 'Никита Андреевич');
     // Кому отправить
-    $mail->addAddress('nikus1922@icloud.com');
+    $mail->addAddress('nikitanik40658@gmail.com');
     //Тема письма
     $mail->Subject = 'Неужели ты смог, спасибо папаша';
 
@@ -51,7 +51,7 @@
         //Путь загрузки файлов
         $filePath = __DIR__ . '/files/' . $_FILES['image']['name'];
         //Грузим файл
-        if (copy($_FILES['image']['tmp_name'], $filePath)) {
+        if (copy($_FILES['image']['tmp_name'], $filePath)){
             $fileAttach = $filePath;
             $body.='<p><strong>Фото в приложении:</strong></p>';
             $mail->addAttachment($fileAttach);
